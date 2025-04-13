@@ -9,18 +9,18 @@ public class Dresseur {
         // constructeur
     }
 
+    
+    public void ajouterPkmn() {
+        // pour ajouter a l'equipe ? pour utiliser add, etc
+    }
+    
+    public void retirerPkmn() {
+        // idem
+    }
+    
     public void afficherEquipe() {
         // print l'array equipe numerotee avec le nom du pkmn
         
     }
-
-    public void ajouterPkmn() {
-        // pour ajouter a l'equipe ? pour utiliser add, etc
-    }
-
-    public void retirerPkmn() {
-        // idem
-    }
-
     
 }

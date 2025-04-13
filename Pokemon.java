@@ -18,29 +18,37 @@ public class Pokemon {
     }
 
     public void attaquerPkmn(Pokemon cible, Technique attaque) {
-        // demander à l'user qu'elle technique ? mais non après faut un scanner 
-        // dcp on laisse tomber les techniques ??? 
-        // ou alors ça donne attaquer(Pokemon cible, Technique technique) *
-        // yeahhh
-        // faire une condition pour s'assurer que la technique est bien dans l'array 
-        // si oui, executer le code suivant, sinon dire que le pkmn ne possede pas l'attaque !
-        // verifier que la cible n'est pas KO
+
+        // for (int i = 0; i < techniques.length; i++) {
+        //     if (attaque != techniques[i]) {
+        //         System.out.println(nom + " ne connaît pas cette attaque");
+        //     } else {
+        //         System.out.println(nom + " attaque normalement");
+        //     }
+        // }
+
+        System.out.println(nom + " lance " + attaque.nom + "...");
         cible.pv -= attaque.puissance;
-        System.out.println(nom + " lance " + attaque.nom);
         System.out.println(cible.nom + " perd " + attaque.puissance + " PV !");
-        System.out.println("Il lui reste " + cible.pv + " PV");
+
+        if (cible.pv <= 0) { // on verifie que le Pokemon a toujours des PV
+            cible.pv = pv; // on réinitialise les PV à 0 pour ne pas avoir de PV negatifs lorsqu'on check les infos du Pokemon cible après le combat 
+            System.out.println(cible.nom + " est K.O !\n");
+        } else {
+            System.out.println("Il lui reste " + cible.pv + " PV\n");
+        }
     }
 
     public void voirInfos() {
-        // voir infos du pokemon
         System.out.println("Nom : " + nom);
         System.out.println("Type : " + type);
         System.out.println("Niveau " + niveau);
         System.out.println(pv + " PV");
-        // faire une boucle pour afficher les techniques 
-        // System.out.println(techniques[0].nom);
-        System.out.println("\n");
-
+        System.out.println("Attaques : ");
+        for (int i = 0; i < techniques.length; i++) {
+            System.out.println((i+1) + ". " + techniques[i].nom);
+        }
+        System.out.println("");
     }
 
     public void changerNom(String surnom) {

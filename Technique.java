@@ -10,9 +10,8 @@ public class Technique {
     }
 
     public void afficherStats() {
-        System.out.println("Nom de la technique : " + nom);
+        System.out.println("Nom : " + nom);
         System.out.println("Type : " + type);
-        System.out.println("Dégâts infligés : " + puissance);
-        System.out.println("\n");
+        System.out.println("Dégâts infligés : " + puissance + "\n");
     }
 }
