@@ -18,19 +18,22 @@ public class Main {
         // Dresseur sacha = new Dresseur("Sacha");
 
         // Tests
-        /* gruikui.voirInfos();
-        pikachu.voirInfos();
-        melofee.voirInfos();
-        roucool.voirInfos(); */
+        // gruikui.voirInfos();
+        // pikachu.voirInfos();
+        // melofee.voirInfos();
+        // roucool.voirInfos();
 
         // gruikui.changerNom("Cochon");
         // gruikui.voirInfos();
 
         // flammeche.afficherStats();
 
-        gruikui.attaquerPkmn(pikachu, charge);
-        gruikui.attaquerPkmn(gruikui, charge);
-        gruikui.attaquerPkmn(pikachu, flammeche);
+        // gruikui.attaquerPkmn(pikachu, charge);
+        // gruikui.attaquerPkmn(gruikui, charge);
+        // gruikui.attaquerPkmn(pikachu, flammeche);
 
+        gruikui.attaquerPkmn(roucool, vol);
+
+        pikachu.voirInfos();
     }
 }
