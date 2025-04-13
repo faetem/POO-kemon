@@ -5,7 +5,6 @@ public class Pokemon {
     String type; 
     int pv;
     int niveau;
-    // ArrayList<Technique> techniques; // utiliser arraylist ou juste une liste de types Techniques avec les techniques ?  mieux une liste comme ça on instancie directement avec l'obj Pokemon
     Technique[] techniques; 
 
     Pokemon(String nom, String type, int pv, int niveau, Technique[] techniques) {
@@ -19,13 +18,14 @@ public class Pokemon {
 
     public void attaquerPkmn(Pokemon cible, Technique attaque) {
 
-        // for (int i = 0; i < techniques.length; i++) {
-        //     if (attaque != techniques[i]) {
-        //         System.out.println(nom + " ne connaît pas cette attaque");
-        //     } else {
-        //         System.out.println(nom + " attaque normalement");
-        //     }
-        // }
+        // verifier que attaque est bien dans la liste d'attaques du Pokemon
+        /* for (int i = 0; i < techniques.length; i++) {
+            if (attaque != techniques[i]) {
+                System.out.println(nom + " ne connaît pas cette attaque");
+            } else {
+                System.out.println(nom + " attaque normalement");
+            }
+        } */
 
         System.out.println(nom + " lance " + attaque.nom + "...");
         cible.pv -= attaque.puissance;

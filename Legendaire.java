@@ -1,17 +1,13 @@
 public class Legendaire extends Pokemon {
-    // how ? 
-    // faire un override de attaquer mais qui one shot la cible sans preciser de technique meme......
-
-    /////////////////////////////////////////////////////////////////////////////
-     
-    // ex de override vu en ligne
-    /* public class Singe {
-        public void mangerBananes(int nb) { ... }
-    ...
+    // String capaciteSpe;
+    
+    Legendaire() {
+        // constructeur
     }
-    class Babouin extends Singe {
-        @Override
-        public void mangerBanane(int nb) { ... }  // n'est pas une redéfinition
-        ...
-}  */
+
+    @Override
+    public void attaquerPkmn(Pokemon cible) {
+        // attaquerPkmn sans techniques car attaquer seulement suffit à oneshot la cible
+    }
+    
 }

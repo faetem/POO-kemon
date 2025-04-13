@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 public class Dresseur {
     String nom;
-    ArrayList<Pokemon> equipe; // peut etre mettre en private ? et utiliser un getter
-    // plutot arraylist que built in array pour pouvoir ajouter et retirer des pkmn a l'equipe OKLMMMMM
+    ArrayList<Pokemon> equipe;
 
     Dresseur(String nom) {
-        // constructeur
+        this.nom = nom;
+        this.equipe = new ArrayList<>();
     }
 
     
