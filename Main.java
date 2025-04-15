@@ -6,36 +6,50 @@ public class Main {
         Technique flammeche = new Technique("Flammeche", "Feu", 15);
         Technique eclair = new Technique("Eclair", "Electrique", 10);
         Technique vol = new Technique("Vol", "Vol", 10);
+        Technique surf = new Technique("Surf", "Eau", 7);
+        Technique trempette = new Technique("Trempette", "Normal", 1);
 
         // Pokemons
-        Pokemon gruikui = new Pokemon("Gruikui", "Feu", 15, 3, new Technique[]{flammeche, charge});
+        Pokemon gruikui = new Pokemon("Gruikui", "Feu", 15, 3, new Technique[]{charge, flammeche});
         Pokemon pikachu = new Pokemon("Pikachu", "Électrik", 17, 5, new Technique[]{charge, eclair});
         Pokemon melofee = new Pokemon("Mélofée", "Fée", 25, 9, new Technique[]{charge, ecrasface});
-        Pokemon roucool = new Pokemon("Roucool", "Vol", 12, 6, new Technique[]{vol, charge});
-        Pokemon moustillon = new Pokemon("Moustillon", "Eau", 14, 5, new Technique[]{charge});
+        Pokemon roucool = new Pokemon("Roucool", "Vol", 12, 6, new Technique[]{charge, vol});
+        Pokemon moustillon = new Pokemon("Moustillon", "Eau", 14, 5, new Technique[]{charge, surf});
+        Pokemon magicarpe = new Pokemon("Magicarpe", "Eau", 5, 2, new Technique[]{trempette})
 
         // Legendaires
         Legendaire zekrom = new Legendaire("Zekrom", "Dragon", 100, 100, new Technique[]{charge});
-        Legendaire reshiram = new Legendaire("Reshiram", "Dragon", 100, 1, null);
+        Legendaire reshiram = new Legendaire("Reshiram", "Dragon", 100, 1, new Technique[]{});
 
         // Dresseurs
         /* Dresseur sacha = new Dresseur("Sacha");
-        sacha.ajouterPkmn(moustillon);
-        sacha.afficherEquipe(); */
-        /* sacha.ajouterPkmn(gruikui);
+        Dresseur ondine = new Dresseur("Ondine");
+
+        sacha.ajouterPkmn(pikachu);
+        sacha.ajouterPkmn(melofee);
+        ondine.ajouterPkmn(magicarpe);
+
+        sacha.afficherEquipe(); 
+        sacha.ajouterPkmn(gruikui);
         sacha.ajouterPkmn(melofee);
         sacha.afficherEquipe();
         sacha.retirerPkmn(moustillon);
-        sacha.afficherEquipe(); */
+
+        ondine.afficherEquipe()
+        sacha.afficherEquipe(); */ 
 
         // Tests
-        // gruikui.voirInfos();
-        // pikachu.voirInfos();
-        // melofee.voirInfos();
-        // roucool.voirInfos();
+        /* gruikui.voirInfos();
+        pikachu.voirInfos();
+        melofee.voirInfos();
+        roucool.voirInfos(); */
+        zekrom.voirInfos();
+        reshiram.voirInfos();
 
-        // gruikui.changerNom("Cochon");
-        // gruikui.voirInfos();
+        gruikui.changerNom("Mignon");
+        gruikui.voirInfos();
+
+        zekrom.changerNom("Drago");
 
         // flammeche.afficherStats();
 
@@ -44,11 +58,6 @@ public class Main {
         // gruikui.attaquerPkmn(pikachu, flammeche);
 
         // gruikui.attaquerPkmn(roucool, vol);
-        // zekrom.attaquerPkmn(gruikui);
-        System.out.println(reshiram.nom);
-        System.out.println(reshiram.type);
-        System.out.println(reshiram.pv);
-        System.out.println(reshiram.niveau);
-        // pikachu.voirInfos();
+        zekrom.attaquerPkmn(gruikui, charge);
     }
 }

@@ -18,15 +18,6 @@ public class Pokemon {
 
     public void attaquerPkmn(Pokemon cible, Technique attaque) {
 
-        // verifier que attaque est bien dans la liste d'attaques du Pokemon
-        /* for (int i = 0; i < techniques.length; i++) {
-            if (attaque != techniques[i]) {
-                System.out.println(nom + " ne connaît pas cette attaque");
-            } else {
-                System.out.println(nom + " attaque normalement");
-            }
-        } */
-
         System.out.println(nom + " lance " + attaque.nom + "...");
         cible.pv -= attaque.puissance;
         System.out.println(cible.nom + " perd " + attaque.puissance + " PV !");
@@ -44,9 +35,13 @@ public class Pokemon {
         System.out.println("Type : " + type);
         System.out.println("Niveau " + niveau);
         System.out.println(pv + " PV");
-        System.out.println("Attaques : ");
-        for (int i = 0; i < techniques.length; i++) {
-            System.out.println((i+1) + ". " + techniques[i].nom);
+        if (techniques.length == 0) {
+            System.out.println(nom + " ne connaît aucune technique pour l'instant !");
+        } else {
+            System.out.println("Attaques : ");
+            for (int i = 0; i < techniques.length; i++) {
+                System.out.println((i + 1) + ". " + techniques[i].nom);
+            }
         }
         System.out.println("");
     }
