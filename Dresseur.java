@@ -9,18 +9,20 @@ public class Dresseur {
         this.equipe = new ArrayList<>();
     }
 
-    
-    public void ajouterPkmn() {
-        // pour ajouter a l'equipe ? pour utiliser add, etc
+    public void ajouterPkmn(Pokemon pokemon) {
+        equipe.add(pokemon);
     }
     
-    public void retirerPkmn() {
-        // idem
+    public void retirerPkmn(Pokemon pokemon) {
+        equipe.remove(pokemon);
     }
     
     public void afficherEquipe() {
-        // print l'array equipe numerotee avec le nom du pkmn
-        
+        System.out.println("Pokemons de " + nom + " :");
+        for (Pokemon pokemon : equipe) {
+            System.out.println(pokemon.nom);
+        }
+        System.out.println("");
     }
     
 }
