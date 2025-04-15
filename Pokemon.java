@@ -1,11 +1,12 @@
 public class Pokemon {
-    String nom; 
+    String nom; // attribut
     String type; 
     int pv;
     int niveau;
     Technique[] techniques; 
 
-    Pokemon(String nom, String type, int pv, int niveau, Technique[] techniques) {
+    // constructeur
+    Pokemon(String nom, String type, int pv, int niveau, Technique[] techniques) { 
         this.nom  = nom; 
         this.type = type; 
         this.pv = pv;
@@ -28,10 +29,10 @@ public class Pokemon {
     }
 
     public void voirInfos() {
-        System.out.println("Nom : " + nom);
-        System.out.println("Type : " + type);
-        System.out.println("Niveau " + niveau);
-        System.out.println(pv + " PV");
+        System.out.println("Nom : " + this.nom);
+        System.out.println("Type : " + this.type);
+        System.out.println("Niveau " + this.niveau);
+        System.out.println(this.pv + " PV");
         if (techniques.length == 0) {
             System.out.println(this.nom + " ne connaît aucune technique pour l'instant !");
         } else {

@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.ArrayList; // on importe la librairie
 
 public class Dresseur {
     String nom;
