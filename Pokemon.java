@@ -1,5 +1,3 @@
-// import java.util.ArrayList;
-
 public class Pokemon {
     String nom; 
     String type; 
@@ -12,18 +10,17 @@ public class Pokemon {
         this.type = type; 
         this.pv = pv;
         this.niveau = niveau;
-        // this.techniques = new ArrayList<>();
         this.techniques = techniques;
     }
 
     public void attaquerPkmn(Pokemon cible, Technique attaque) {
 
-        System.out.println(nom + " lance " + attaque.nom + "...");
+        System.out.println(this.nom + " lance " + attaque.nom + "...");
         cible.pv -= attaque.puissance;
         System.out.println(cible.nom + " perd " + attaque.puissance + " PV !");
 
-        if (cible.pv <= 0) { // on verifie que le Pokemon a toujours des PV
-            cible.pv = pv; // on réinitialise les PV à 0 pour ne pas avoir de PV negatifs lorsqu'on check les infos du Pokemon cible après le combat 
+        if (cible.pv <= 0) { // on vérifie que le Pokemon a toujours des PV
+            cible.pv = pv; // on réinitialise les PV à 0 pour ne pas avoir de PV négatifs lorsqu'on check les infos du Pokemon cible après le combat 
             System.out.println(cible.nom + " est K.O !\n");
         } else {
             System.out.println("Il lui reste " + cible.pv + " PV\n");
@@ -36,7 +33,7 @@ public class Pokemon {
         System.out.println("Niveau " + niveau);
         System.out.println(pv + " PV");
         if (techniques.length == 0) {
-            System.out.println(nom + " ne connaît aucune technique pour l'instant !");
+            System.out.println(this.nom + " ne connaît aucune technique pour l'instant !");
         } else {
             System.out.println("Attaques : ");
             for (int i = 0; i < techniques.length; i++) {
@@ -47,8 +44,8 @@ public class Pokemon {
     }
 
     public void changerNom(String surnom) {
-        System.out.println(nom  + " change de nom...");
-        nom = surnom;
+        System.out.println(this.nom  + " change de nom...");
+        this.nom = surnom;
         System.out.println("Il s'appelle " + surnom + " maintenant !\n");
     }
 
