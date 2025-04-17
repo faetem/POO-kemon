@@ -18,7 +18,7 @@ public class Dresseur {
     }
     
     public void afficherEquipe() {
-        System.out.println("Pokemons de " + nom + " :");
+        System.out.println("Pokemons de " + this.nom + " :");
         for (Pokemon pokemon : equipe) {
             System.out.println(pokemon.nom);
         }

@@ -19,7 +19,7 @@ public class Main {
 
         // Instanciation Légendaires
         Legendaire zekrom = new Legendaire("Zekrom", "Dragon", 100, 100, new Technique[]{charge});
-        Legendaire reshiram = new Legendaire("Reshiram", "Dragon", 100, 1, new Technique[]{});
+        Legendaire reshiram = new Legendaire("Reshiram", "Dragon", 100, 1, new Technique[]{}); // le niveau est initialisé à 100 dans le constructeur donc reshiram.niveau n'est pas 1 mais 100
 
         // Instanciation des Dresseurs
         Dresseur sacha = new Dresseur("Sacha");
@@ -37,7 +37,7 @@ public class Main {
         zekrom.voirInfos();
         reshiram.voirInfos();
         
-        gruikui.changerNom("Mignon");
+        gruikui.changerNom("Toto");
         gruikui.voirInfos();
         zekrom.changerNom("Drago");
         
